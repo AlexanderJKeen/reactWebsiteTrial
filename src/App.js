@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
 
-function App() {
+class App extends React.Component {
+  state = {
+    slash: ["About","Home","Projects","Contact" ]
+  }
+  render(){
   return (
+    
     <div className="App">
+    <div className= "navbar">
+      <Navbar /> 
+    </div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="./t.jpg" className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I'm editing this shiz        
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.youtube.com/watch?v=PTEYCClxaUE"
           target="_blank"
           rel="noopener noreferrer"
+          o
         >
-          Learn React
+          Chat shit get banged
         </a>
+
+        {this.state.slash === "about" ? <About /> : this.state.slash === "projects" ? <Projects /> : this.state.slash === "contact" ? <Contact /> : <Home />}
       </header>
     </div>
   );
+  }
+}
+
+const About = () => {
+  return (
+    <div>About</div>
+  )
+}
+
+const Home = () => {
+  return (
+    <div>Home</div>
+  )
 }
 
 export default App;
