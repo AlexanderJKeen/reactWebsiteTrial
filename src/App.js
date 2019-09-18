@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-
+import Home from './components/Home';
 class App extends React.Component {
   state = {
     slash: ["About","Home","Projects","Contact" ]
@@ -12,6 +12,7 @@ class App extends React.Component {
     <div className="App">
     <div className= "navbar">
       <Navbar /> 
+      <Home />
     </div>
       <header className="App-header">
         <img src="./t.jpg" className="App-logo" alt="logo" />
