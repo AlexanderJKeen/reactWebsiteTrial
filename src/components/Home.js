@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Navbar from './components/Contacts';
+import Navbar from './components/Projects';
+import Navbar from './components/About';
 
 const Home = () => {
     return (
-        <div>
-            <Navbart />
+        <div id="bckImage">
+            <Navbar />
             <h1>Homepage</h1>
-            <div></div>
+            {/* animation */}
         
         </div>
     )
